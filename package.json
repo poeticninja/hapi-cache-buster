@@ -1,0 +1,30 @@
+{
+  "name": "hapi-cache-buster",
+  "version": "0.0.1",
+  "description": "Hapi plugin to a bust the cache of browser assets.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/poeticninja/hapi-cache-buster"
+  },
+  "keywords": [
+    "hapi",
+    "cache",
+    "plugin",
+    "view",
+    "templates",
+    "assets"
+  ],
+  "author": {
+    "name": "Saul Maddox"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poeticninja/hapi-cache-buster/issues"
+  },
+  "dependencies": {
+    "path": "~0.4.9",
+    "hoek": "~1.4.0",
+    "lodash": "~2.4.1"
+  }
+}
