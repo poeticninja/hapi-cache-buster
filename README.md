@@ -20,3 +20,6 @@ Jade:
 
 ### Options
 Instead of using the package.json version for the cache version, you can specify a number and pass it into the plugin options.
+
+### Other
+You can see this being used in the Hapi Ninja boilerplate example. [https://github.com/poeticninja/hapi-ninja](https://github.com/poeticninja/hapi-ninja)
