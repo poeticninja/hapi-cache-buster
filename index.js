@@ -17,14 +17,14 @@ exports.register = function (plugin, options, callback) {
     // Hook onto the 'onPostHandler'
     plugin.ext('onPostHandler', function (request, next) {
         // Get the response object
-        var response = request.response();
+        var response = request.response;
 
         // Check to see if the response is a view
         if (response.variety === 'view') {
-                if(_.isEmpty(response.view.context.version)){
-                    response.view.context.version = {};
+                if(_.isEmpty(response.source.context.version)){
+                    response.source.context.version = {};
                 }
-                response.view.context.version.cache = '?v=' + versionCache;
+                response.source.context.version.cache = '?v=' + versionCache;
         }
         next();
     });
