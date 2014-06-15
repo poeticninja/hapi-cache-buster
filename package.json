@@ -1,6 +1,6 @@
 {
   "name": "hapi-cache-buster",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Hapi plugin to a bust the cache of browser assets.",
   "main": "index.js",
   "repository": {
