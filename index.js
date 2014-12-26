@@ -1,7 +1,7 @@
 var Path = require('path'),
     _ = require('lodash');
 
-exports.register = function (plugin, options, next) {
+exports.register = function (server, options, next) {
     // if options is not given, create version cache from package.json version. else use the options as the cache version
     if(_.isEmpty(options)){
         // Get the version of the application that loads this module.
@@ -14,7 +14,7 @@ exports.register = function (plugin, options, next) {
     }
 
     // Hook onto the 'onPostHandler'
-    plugin.ext('onPostHandler', function (request, next) {
+    server.ext('onPostHandler', function (request, reply) {
         // Get the response object
         var response = request.response;
 
@@ -25,7 +25,7 @@ exports.register = function (plugin, options, next) {
                 }
                 response.source.context.version.cache = '?v=' + versionCache;
         }
-        return next();
+        return reply.continue();
     });
     return next();
 };
