@@ -1,11 +1,14 @@
 {
   "name": "hapi-cache-buster",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Hapi plugin to a bust the cache of browser assets.",
   "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/poeticninja/hapi-cache-buster"
+  },
+  "scripts": {
+    "test": "./node_modules/lab/bin/lab"
   },
   "keywords": [
     "hapi",
@@ -23,8 +26,13 @@
     "url": "https://github.com/poeticninja/hapi-cache-buster/issues"
   },
   "dependencies": {
-    "path": "~0.4.x",
-    "hoek": "~1.4.x",
-    "lodash": "~2.4.x"
+    "path": "~0.4.x"
+  },
+  "devDependencies": {
+    "cheerio": "~0.19.0",
+    "code": "~1.4.0",
+    "hapi": "~8.4.0",
+    "lab": "~5.5.1",
+    "swig": "~1.4.2"
   }
 }
