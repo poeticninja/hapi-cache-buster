@@ -13,10 +13,19 @@ Lets say your package.json is version `0.0.1`, it will print out `?v=001`. To bu
 
 
 Handlebars:
-`<link rel="stylesheet" href="css/styles.css{{version.cache}}">`
+```
+<link rel="stylesheet" href="css/styles.css{{version.cache}}">
+```
 
 Jade:
-`link(rel='stylesheet', href='css/styles.css#{version.cache}')`
+```
+link(rel='stylesheet', href='css/styles.css#{version.cache}')
+```
+
+Ejs:
+```
+<link rel="stylesheet" href="css/style.css<%= version.cache %>">
+```
 
 ### Options
 Instead of using the package.json version for the cache version, you can specify a number and pass it into the plugin options.
